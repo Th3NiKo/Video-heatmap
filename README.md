@@ -29,7 +29,7 @@ Script for heatmap generation (for movement) from single video with static camer
 
 ## Getting Started
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1J10ZQep7UX2BU3MnaWLJbwfe9nBuq9lP?usp=sharing)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1NPc13vjGx4u5yflK_xyuWL1Xw5jy_ZOd?usp=sharing)
 
 ### Quick start
 
@@ -85,7 +85,7 @@ If u want to **DISABLE LIVE VIEW** of process use -d flag
 python video_heatmap.py -f input.mp4 -o output_name -d
 ```
 
-If u want to check **SPEED UP PROCESS** you can adjust -t flag to take every x frame. \
+If u want to **SPEED UP PROCESS** you can adjust -t flag to take every x frame. \
 Example: Take every third frame
 
 ```bash

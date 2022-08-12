@@ -9,6 +9,9 @@ Program pipeline:
     5. Apply heatmap colormap
     6. Optional: Supervise with original frame (check --alpha parameter)
     7. Save new frame
+
+TODO:
+    - Change progressbar
 """
 
 # pylint: disable=no-member
