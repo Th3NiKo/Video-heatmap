@@ -10,7 +10,7 @@ import numpy as np
 
 def apply_morph(image: np.ndarray,
                 morph_type=cv2.MORPH_CLOSE,
-                kernel_size: Tuple[int, int] = (3,3),
+                kernel_size: Tuple[int, int] = (3, 3),
                 make_gaussian: bool = True):
     """
     Apply opencv morphological operation to image and return it.
@@ -27,11 +27,11 @@ def apply_morph(image: np.ndarray,
     """
     kernel = cv2.getStructuringElement(cv2.MORPH_RECT, kernel_size)
     if make_gaussian:
-        image = cv2.GaussianBlur(image,(3,3),0)
+        image = cv2.GaussianBlur(image, (3, 3), 0)
     return cv2.morphologyEx(image, morph_type, kernel)
 
 
-def add_images(image1: np.ndarray, 
+def add_images(image1: np.ndarray,
                image2: np.ndarray) -> np.ndarray:
     """
     Add two images together. Colors values can be bigger then 255 restriction.
@@ -88,4 +88,3 @@ def superimpose(image1: np.ndarray,
     """
 
     return cv2.addWeighted(image1, alpha, image2, 1 - alpha, 0.0)
-

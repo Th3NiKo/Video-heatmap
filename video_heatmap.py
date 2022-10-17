@@ -22,6 +22,7 @@ import numpy as np
 import vision
 import arguments_parser
 
+
 def main():
     """
     Whole heatmap pipeline creation.
@@ -50,7 +51,7 @@ def main():
 
                 erodated_image = vision.apply_morph(background_filter,
                                                     morph_type=cv2.MORPH_ERODE,
-                                                    kernel_size=(5,5))
+                                                    kernel_size=(5, 5))
                 accumulated_image = vision.add_images(accumulated_image, erodated_image)
                 normalized_image = vision.normalize_image(accumulated_image)
                 heatmap_image = vision.apply_heatmap_colors(normalized_image)
@@ -69,6 +70,7 @@ def main():
     cv2.imwrite(args.video_output + ".png", heatmap_image)
     capture.release()
     cv2.destroyAllWindows()
+
 
 if __name__ == '__main__':
     main()
