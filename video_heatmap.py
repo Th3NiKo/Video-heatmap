@@ -43,6 +43,10 @@ def main():
 
     count = 0
 
+    if args.take_every <= 0: 
+        print("Take every argument should be positive and non-zero, setting it to default value 1")
+        args.take_every = 1
+
     while read_succes:
         read_succes, video_frame = capture.read()
         if read_succes:

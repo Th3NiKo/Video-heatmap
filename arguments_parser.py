@@ -21,7 +21,7 @@ def prepare_parser():
                               heatmap and original video frames. Value between \
                               0.0-1.0 represent what part of original video heatmap \
                               gonna take. Default: 0.9",
-                        required=False, default=0.9)
+                        required=False, default=0.9, type=float)
 
     # Disable live view
     parser.add_argument("-d", "--disable", action="store_true", dest="video_disable",
@@ -38,11 +38,11 @@ def prepare_parser():
     parser.add_argument("-s", "--skip", action="store", dest="video_skip",
                         help="Skip first number of frames in order to warm up background \
                               substraction alghoritm. Default: 200 frames",
-                        required=False, default=200)
+                        required=False, default=200, type=int)
 
-    # Take  every x frame
+    # Take every x frame
     parser.add_argument("-t", "--take-every", action="store", dest="take_every",
                         help="In order to speed up process it is possible to skip frames and \
                             take every x frame. Default: 1 (take all frames).",
-                        required=False, default=1)
+                        required=False, default=1, type=int)
     return parser
